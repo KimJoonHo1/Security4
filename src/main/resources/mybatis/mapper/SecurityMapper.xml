@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.security2.repository.SecurityRepository">
+    <insert id="save">
+        insert into user2(username, password, email, role, createDate, provider, providerId)
+        values(
+        #{user.username}
+        , #{user.password}
+        , #{user.email}
+        , #{user.role}
+        , now()
+        , #{user.provider}
+        , #{user.providerId}
+        );
+    </insert>
+
+    <select id="login" resultType="com.example.security2.model.User">
+        SELECT * FROM user2 where username = #{username}
+    </select>
+</mapper>

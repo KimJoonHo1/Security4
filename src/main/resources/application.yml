@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8084
   servlet:
     context-path: /
     encoding:
@@ -40,7 +40,7 @@ spring:
               - email
             client-name: Naver
             authorization-grant-type: authorization_code
-            redirect-uri: http://localhost:8080/login/oauth2/code/naver
+            redirect-uri: http://localhost:8084/login/oauth2/code/naver
 
         provider:
           naver:
