@@ -98,4 +98,10 @@ public class SecurityController {
     public String admin() {
         return "admin";
     }
+
+    @GetMapping("/night")
+    @ResponseBody
+    public String night() {
+        return "night";
+    }
 }
