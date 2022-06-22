@@ -104,4 +104,10 @@ public class SecurityController {
     public String night() {
         return "night";
     }
+    
+    @GetMapping("nanana")
+    @ResponseBody
+    public String nanana() {
+        return "나나나 나 김준호 되어버렸다";
+    }
 }
